@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: action_basic_mood
+
+- rule: Query Flower Price
+  steps:
+  - intent: flower_price
+  - action: action_flower_price

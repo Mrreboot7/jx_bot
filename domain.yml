@@ -1,0 +1,37 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- sad:
+    use_entities: true
+- happy:
+    use_entities: true
+- sleepiness:
+    use_entities: true
+- red_face:
+    use_entities: true
+- witty:
+    use_entities: true
+- thanks:
+    use_entities: true
+- flower_price:
+    use_entities: true
+entities:
+- position
+- date
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+actions:
+- action_basic_mood
+- action_flower_price
+forms: {}
+e2e_actions: []
